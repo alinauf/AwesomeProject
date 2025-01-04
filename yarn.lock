@@ -2848,6 +2848,7 @@ __metadata:
     react: 18.2.0
     react-native: 0.73.11
     react-native-gesture-handler: ^2.18.0
+    react-native-navigation: ^7.40.3
     react-native-reanimated: ^3.16.6
     react-test-renderer: 18.2.0
     typescript: 5.0.4
@@ -5204,7 +5205,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"hoist-non-react-statics@npm:^3.3.0":
+"hoist-non-react-statics@npm:3.x.x, hoist-non-react-statics@npm:^3.3.0":
   version: 3.3.2
   resolution: "hoist-non-react-statics@npm:3.3.2"
   dependencies:
@@ -6561,7 +6562,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lodash@npm:^4.17.21":
+"lodash@npm:4.17.x, lodash@npm:^4.17.21":
   version: 4.17.21
   resolution: "lodash@npm:4.17.21"
   checksum: eb835a2e51d381e561e508ce932ea50a8e5a68f4ebdd771ea240d3048244a8d13658acbd502cd4829768c56f2e16bdd4340b9ea141297d472517b83868e677f7
@@ -7772,7 +7773,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prop-types@npm:^15.7.2, prop-types@npm:^15.8.1":
+"prop-types@npm:15.x.x, prop-types@npm:^15.7.2, prop-types@npm:^15.8.1":
   version: 15.8.1
   resolution: "prop-types@npm:15.8.1"
   dependencies:
@@ -7851,6 +7852,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-lifecycles-compat@npm:2.0.0":
+  version: 2.0.0
+  resolution: "react-lifecycles-compat@npm:2.0.0"
+  checksum: ace0e1edfa1a544a67a354084c2dc64556e37695c2ad10118ec3e09c491dfe68c5f9332cbcb4963b0dd7c38d22f094ebe700e7d816108e0a28627a4a5e693ba3
+  languageName: node
+  linkType: hard
+
 "react-native-gesture-handler@npm:^2.18.0":
   version: 2.21.2
   resolution: "react-native-gesture-handler@npm:2.21.2"
@@ -7863,6 +7871,28 @@ __metadata:
     react: "*"
     react-native: "*"
   checksum: 0a42cedb8860a326b465085d0f7622ba03f038b0f0bdd1b1fe5703e58d62cb08bfb82a686c069a1a1410705c2ae0d82971b0449d83796fdd6d071131cf88e68b
+  languageName: node
+  linkType: hard
+
+"react-native-navigation@npm:^7.40.3":
+  version: 7.40.3
+  resolution: "react-native-navigation@npm:7.40.3"
+  dependencies:
+    hoist-non-react-statics: 3.x.x
+    lodash: 4.17.x
+    prop-types: 15.x.x
+    react-lifecycles-compat: 2.0.0
+    tslib: 1.9.3
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+    remx: "*"
+  peerDependenciesMeta:
+    remx:
+      optional: true
+  bin:
+    rnn-link: autolink/postlink/run.js
+  checksum: 753ebd18771b79d83bed34df3c37589e386c0c0aaaa9c5b753c54d83b31a912c509a6601c298bc1f58f42f9e76e05a693c1186ba18fcf3dd060e0ee15f1f5bf7
   languageName: node
   linkType: hard
 
@@ -9055,6 +9085,13 @@ __metadata:
   version: 0.0.3
   resolution: "tr46@npm:0.0.3"
   checksum: 726321c5eaf41b5002e17ffbd1fb7245999a073e8979085dacd47c4b4e8068ff5777142fc6726d6ca1fd2ff16921b48788b87225cbc57c72636f6efa8efbffe3
+  languageName: node
+  linkType: hard
+
+"tslib@npm:1.9.3":
+  version: 1.9.3
+  resolution: "tslib@npm:1.9.3"
+  checksum: 56ef6325adb72c6477fb48256304507a2c475d69d7ead4644d61f5685fac2a275a38cf217c556e63fc3c177e729426d730e2c2e71c8042dc6cc57338a849edb2
   languageName: node
   linkType: hard
 
