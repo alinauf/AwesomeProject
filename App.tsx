@@ -16,6 +16,8 @@ import {
   useColorScheme,
   View,
 } from 'react-native';
+import Animated, {useSharedValue, withSpring} from 'react-native-reanimated';
+
 import {GestureHandlerRootView, RectButton} from 'react-native-gesture-handler';
 
 import {Colors, Header} from 'react-native/Libraries/NewAppScreen';
@@ -52,9 +54,14 @@ function Section({children, title}: SectionProps): React.JSX.Element {
 
 function App(): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
+  const width = useSharedValue(100);
 
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
+  };
+
+  const handlePress = () => {
+    width.value = withSpring(width.value + 50);
   };
 
   return (
@@ -68,6 +75,13 @@ function App(): React.JSX.Element {
           contentInsetAdjustmentBehavior="automatic"
           style={backgroundStyle}>
           <Header />
+          <Animated.View
+            style={{
+              width,
+              height: 100,
+              backgroundColor: 'violet',
+            }}
+          />
           <View
             style={{
               backgroundColor: isDarkMode ? Colors.black : Colors.white,
@@ -77,12 +91,9 @@ function App(): React.JSX.Element {
               screen and then come back to see your edits.
             </Section>
 
-            <RectButton
-              onPress={() => {
-                console.log('bar');
-              }}>
+            <RectButton onPress={handlePress}>
               <View accessible accessibilityRole="button">
-                <Text>Bar</Text>
+                <Text>Click mEE</Text>
               </View>
             </RectButton>
 
